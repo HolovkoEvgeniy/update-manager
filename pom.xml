@@ -20,7 +20,7 @@
 
 
     <properties>
-        <java.version>20</java.version>
+        <java.version>17</java.version>
         <maven.test.skip>true</maven.test.skip>
     </properties>
 
