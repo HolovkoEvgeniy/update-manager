@@ -27,13 +27,13 @@ public class ProfileController {
         return userService.getProfile(userDetails.user().getId());
     }
 
-    @PutMapping("/updateUserCreds")
+    @PostMapping("/updateUserCreds")
     public ResponseEntity<Response> updateUserCreds(@AuthenticationPrincipal UserDetailsImpl userDetails,
                                                     @Valid @RequestBody final UpdateUserCredsRequest credsRequest) {
         return userService.updateUserCreds(userDetails.user().getId(), credsRequest);
     }
 
-    @PutMapping("/updateUserInfo")
+    @PostMapping("/updateUserInfo")
     public ResponseEntity<Response> updateUserInfo(@AuthenticationPrincipal UserDetailsImpl userDetails,
                                                     @Valid @RequestBody final UpdateUserInfoRequest infoRequest) {
         return userService.updateUserInfo(userDetails.user().getId(), infoRequest);
